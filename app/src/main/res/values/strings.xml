@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">minimalistic</string>
+    <string name="message">Watch face tapped</string>
+    <string name="my_analog_name">Minimalistic Analog</string>
+</resources>
