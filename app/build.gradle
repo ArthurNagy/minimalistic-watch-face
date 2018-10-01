@@ -1,8 +1,5 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
@@ -25,18 +22,20 @@ android {
 
 ext {
     androidxVersion = "1.0.0"
+    wearableVersion = "2.3.0"
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.google.android.support:wearable:2.3.0'
+    implementation "com.google.android.support:wearable:$wearableVersion"
     implementation 'com.google.android.gms:play-services-wearable:16.0.0'
 
+    implementation "androidx.appcompat:appcompat:$androidxVersion"
     implementation "androidx.percentlayout:percentlayout:$androidxVersion"
     implementation "androidx.legacy:legacy-support-v4:$androidxVersion"
     implementation "androidx.recyclerview:recyclerview:$androidxVersion"
     implementation "androidx.palette:palette:$androidxVersion"
 
-    compileOnly 'com.google.android.wearable:wearable:2.3.0'
+    compileOnly "com.google.android.wearable:wearable:$wearableVersion"
 }
